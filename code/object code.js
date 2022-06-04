@@ -2,8 +2,7 @@ let obj = ['Hello, ', 'my ', 'name ', 'is ', 'Vlad']
 
 let str = obj[0] + obj[1] + obj[2] + obj[3] + obj[4]
 
-console.log(str)
-// Hello, my name is Vlad
+console.log(str) // Hello, my name is Vlad
 
 let arr = {
 	'Ru': ['Голубой', 'Красный', 'Зеленый'],
@@ -12,26 +11,21 @@ let arr = {
 }
 arr['Ru2'] = arr['Ru']
 
-console.log(arr['En'][2])
-// Green
-console.log(arr['Ru'][0])
-// Голубой
-console.log(arr['Ru2'])
-// ['Голубой', 'Красный', 'Зеленый']
+console.log(arr['En'][2]) // Green
+console.log(arr['Ru'][0]) // Голубой
+console.log(arr['Ru2']) // ['Голубой', 'Красный', 'Зеленый']
 
 let copyObj = []
 Object.assign(copyObj, [obj])
 
-console.log(copyObj)
-// ['Hello, ', 'my ', 'name ', 'is ', 'Vlad']
+console.log(copyObj) // ['Hello, ', 'my ', 'name ', 'is ', 'Vlad']
 
 let user = {
 	name: 'James',
 	isAdmin: false,
 
 	helloName() {
-		console.log(`Hello ${this.name}`)
-		// Hello James
+		console.log(`Hello ${this.name}`) // Hello James
 	},
 }
 
@@ -51,17 +45,14 @@ let user2 = {
 	},
 }
 
-console.log(user2.hello())
-// Hello world + object user2
-console.log(user2.user3.speak())
-// test + object user3
+console.log(user2.hello()) // Hello world + object user2
+console.log(user2.user3.speak()) // test + object user3
 
 function test() {
 	return this
 }
 
-console.log(test())
-// object window
+console.log(test()) // object window
 
 let objectA = {
 	isAdmin: true,
@@ -72,5 +63,4 @@ function objTest(s) {
 	console.log(this.isAdmin + ' test ' + this.creation + '.')
 }
 objectA.test = objTest
-objectA.test()
-// true test low.
+objectA.test() // true test low.
