@@ -20,3 +20,11 @@ let obj3 = {}
 Object.assign(obj3, obj1)
 
 console.log(obj3)
+
+let obj4 = JSON.parse(JSON.stringify(obj1))
+
+console.log(obj4)
+
+let obj5 = { ...obj1 }
+
+console.log(obj5)
