@@ -7,6 +7,8 @@ let user = new Admin('Dey')
 console.log(user.name) // Dey
 console.log(user.isAdmin) // true
 
+// -------------------------------------
+
 function User(name, age) {
 	this.name = name
 	this.age = age
@@ -20,6 +22,8 @@ let Kaya = new User('Kaya', 20) // new obj Kaya
 
 console.log(Kaya.Hello()) // Меня зовут Kaya, мне 20лет
 
+//--------------------------------------------------------
+
 function Person(first, last, age, eyecolor) {
 	this.firstName = first
 	this.lastName = last
@@ -32,6 +36,8 @@ function Person(first, last, age, eyecolor) {
 
 let pers = new Person('James', 'Stone', 19, 'brown')
 console.log(pers.name())
+
+// --------------------------------------------------
 
 const manager = function (name, sales) {
 	return {
@@ -47,3 +53,19 @@ const manager = function (name, sales) {
 const mary = manager('Jule', 120)
 
 console.log(mary.sell('iphone'))
+
+//----------------------------------------
+
+function User(name) {
+	this.name = name
+
+	this.sayHi = function () {
+		console.log('Привет, меня зовут ' + this.name)
+	}
+}
+
+let stanislav = new User('Станислав')
+let dmitry = new User('Дмитрий')
+
+stanislav.sayHi() //'Привет, меня зовут Андрей'
+dmitry.sayHi() //'Привет, меня зовут Кира'
